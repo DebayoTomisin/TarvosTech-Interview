@@ -23,15 +23,16 @@ const useStyles = makeStyles((theme) => ({
     padding: "0.75rem 2rem",
     color:"#fff",
     display: "flex",
-    boxShadow: "none"
+    shadows: ["none"]
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    color: "rgba(0, 0, 0, 0.5)"
+    color: "rgb(0, 0, 0,)",
+    fontSize: "1.2rem"
   },
   title: {
     flexGrow: 1,
-    paddingRight: theme.spacing(12)
+    paddingRight: theme.spacing(-5)
   },
 }));
 
@@ -39,7 +40,7 @@ const Header  = () => {
   const classes = useStyles()
 
   return(
-    <AppBar position="static" color="#fff">
+    <AppBar position="static" color="inherit" elevation={0}>
       <Toolbar>
         <IconButton edge="start" className={classes.menuButton} color="inherit">
           <MenuIcon/>
@@ -49,7 +50,14 @@ const Header  = () => {
           <img src={logo} alt="logo"/>
         </IconButton>
 
-        <IconButton></IconButton>
+        <div>
+          <IconButton className={classes.menuButton} color="inherit">
+            <SearchIcon/>
+          </IconButton>
+          <IconButton className={classes.menuButton} color="inherit">
+            <ShoppingCartIcon/>
+          </IconButton>
+        </div>
       </Toolbar>
     </AppBar>
   )
