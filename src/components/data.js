@@ -25,7 +25,8 @@ const data = [
     price: 199,
     name: "UNEO",
     desc: "Unisex pack of 2",
-    backgroundColor: "#C3E5E4"
+    backgroundColor: "#C3E5E4",
+    slug: "uneo-one"
   },
   {
     id: 36,
@@ -33,7 +34,8 @@ const data = [
     price: 299,
     name: "US Polo",
     desc: "Unisex pack of 2",
-    backgroundColor: "#E6E6E6"
+    backgroundColor: "#E6E6E6",
+    slug: "us-polo"
   },
   {
     id: 37,
@@ -41,7 +43,8 @@ const data = [
     price: 199,
     name: "HERO",
     desc: "Unisex pack of 2",
-    backgroundColor: "#D1D4D8"
+    backgroundColor: "#D1D4D8",
+    slug: "hero"
   },
   {
     id: 42,
@@ -49,7 +52,8 @@ const data = [
     price: 199,
     name:"UNEO",
     desc : "Unisex pack of 2",
-    backgroundColor: "#F7F0E4"
+    backgroundColor: "#F7F0E4",
+    slug: "uneo-two"
   },
   {
     id: 39,
@@ -57,7 +61,8 @@ const data = [
     price: 150,
     name: "Wild Craft",
     desc: "Unisex pack of 3",
-    backgroundColor: "#FCEAF2"
+    backgroundColor: "#FCEAF2",
+    slug: "wild-craft"
   }
 ]
 

@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
@@ -26,7 +26,10 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     margin: "auto",
     width: "50%",
-    height: "auto",
+    height: "50%",
+    left:"unset",
+    top:"45%",
+    transform: "translateY(50%)",
   },
   title: {
     color: "rgba(0,0,0)",
@@ -40,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Card = ({ item }) => {
-  const {id, images, price, name, desc, backgroundColor} = item
+  const {id, images, price, name, desc, backgroundColor, slug} = item
   const classes =  useStyles()
   return(
     <div className={classes.root}>
@@ -50,7 +53,9 @@ const Card = ({ item }) => {
         cols={2}
         style = {{height:"40vh", backgroundColor: backgroundColor}}
         >
-          <img src={images[0]} alt= {id} className={classes.image}/>
+          <Link to={`/item/${slug}`}>
+            <img src={images[0]} alt= {id} className={classes.image}/>
+          </Link>
           <GridListTileBar
           title ={name} 
           subtitle=
