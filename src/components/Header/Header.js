@@ -5,16 +5,12 @@ import { makeStyles } from "@material-ui/core/styles"
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
 
 import logo from "../../images/Group 45.svg"
-import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import SearchIcon from '@material-ui/icons/Search';
 
 import "./Header.css"
-import { Icon } from "@material-ui/core";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,14 +32,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header  = () => {
+const Header  = ({icon}) => {
   const classes = useStyles()
 
   return(
     <AppBar position="static" color="inherit" elevation={0}>
       <Toolbar>
         <IconButton edge="start" className={classes.menuButton} color="inherit">
-          <MenuIcon/>
+          <Link to="/" color="inherit">
+            {icon}
+          </Link>
         </IconButton>
 
         <IconButton className={classes.title}>
@@ -54,9 +52,11 @@ const Header  = () => {
           <IconButton className={classes.menuButton} color="inherit">
             <SearchIcon/>
           </IconButton>
-          <IconButton className={classes.menuButton} color="inherit">
-            <ShoppingCartIcon/>
-          </IconButton>
+          <Link to="/checkout" color="inherit">
+            <IconButton className={classes.menuButton}>
+              <ShoppingCartIcon/>
+            </IconButton>
+          </Link>
         </div>
       </Toolbar>
     </AppBar>
