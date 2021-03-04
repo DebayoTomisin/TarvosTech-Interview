@@ -1,15 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import Header from "./components/Header/Header"
+import Home from "./pages/Home"
 
 function App() {
   return (
     <>
-      <Header/>
-      <br/>
-      <br/>
-      <h1>This is the begining boys</h1>
+    <Home/>      
     </>
   );
 }
